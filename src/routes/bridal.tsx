@@ -1,6 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { CallBand } from "@/components/shell";
-import { PHONE_DISPLAY, PHONE_TEL } from "@/data/salon";
+import { PHONE_DISPLAY, PHONE_TEL, publicPath } from "@/data/salon";
 
 export const Route = createFileRoute("/bridal")({
   head: () => ({
@@ -38,7 +38,7 @@ function BridalPage() {
         </div>
         <figure>
           <img
-            src="/images/bridal/bridal-red.jpg"
+            src={publicPath("/images/bridal/bridal-red.jpg")}
             alt="Editorial photograph of a South Asian bride in red and gold. Not a client of this salon."
             width={1200}
             height={1600}
@@ -88,7 +88,7 @@ function BridalPage() {
         </div>
         <figure>
           <img
-            src="/images/bridal/south-indian-bride.jpg"
+            src={publicPath("/images/bridal/south-indian-bride.jpg")}
             alt="Editorial photograph of a bride in a purple sari with gold jewelry."
             width={1400}
             height={933}
@@ -101,7 +101,7 @@ function BridalPage() {
 
       <section className="mx-auto grid max-w-6xl items-center gap-10 px-5 pb-16 lg:grid-cols-2">
         <img
-          src="/images/henna/mehndi-bangles.jpg"
+          src={publicPath("/images/henna/mehndi-bangles.jpg")}
           alt="Mehndi and gold bangles against a purple sari."
           width={1400}
           height={933}

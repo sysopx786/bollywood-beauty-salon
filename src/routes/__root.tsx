@@ -2,7 +2,7 @@ import { createRootRoute, HeadContent, Link, Outlet, Scripts } from "@tanstack/r
 import { AuthProvider } from "@/lib/auth/provider";
 import { PreviewHostBridge } from "@/components/preview-host-bridge";
 import { Shell } from "@/components/shell";
-import { PHONE_DISPLAY, PHONE_TEL } from "@/data/salon";
+import { PHONE_DISPLAY, PHONE_TEL, publicPath } from "@/data/salon";
 import appCss from "../styles.css?url";
 
 export const Route = createRootRoute({
@@ -13,10 +13,10 @@ export const Route = createRootRoute({
       { name: "theme-color", content: "#5C1A2E" },
     ],
     links: [
-      { rel: "icon", type: "image/svg+xml", href: "/favicon.svg" },
+      { rel: "icon", type: "image/svg+xml", href: publicPath("/favicon.svg") },
       { rel: "stylesheet", href: appCss },
-      { rel: "manifest", href: "/__grok/manifest.webmanifest" },
-      { rel: "apple-touch-icon", href: "/__grok/icon-180.png" },
+      { rel: "manifest", href: publicPath("/__grok/manifest.webmanifest") },
+      { rel: "apple-touch-icon", href: publicPath("/__grok/icon-180.png") },
       { rel: "preconnect", href: "https://fonts.googleapis.com" },
       {
         rel: "stylesheet",

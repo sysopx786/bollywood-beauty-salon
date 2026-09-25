@@ -1,6 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { CallBand } from "@/components/shell";
-import { ADDRESS_LINE, CITY_LINE, hours, PHONE_DISPLAY, PHONE_TEL } from "@/data/salon";
+import { ADDRESS_LINE, CITY_LINE, hours, PHONE_DISPLAY, PHONE_TEL, publicPath } from "@/data/salon";
 
 export const Route = createFileRoute("/about")({
   head: () => ({
@@ -29,7 +29,7 @@ function AboutPage() {
         </div>
         <figure>
           <img
-            src="/images/bridal/jewelry.jpg"
+            src={publicPath("/images/bridal/jewelry.jpg")}
             alt="Editorial close-up of gold jewelry. Not the salon interior."
             width={1400}
             height={933}

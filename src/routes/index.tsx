@@ -1,5 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { featured, getService, hours, reviews, ADDRESS_LINE, CITY_LINE, DIRECTIONS_URL, PHONE_DISPLAY, PHONE_TEL, GOOGLE_URL } from "@/data/salon";
+import { featured, getService, hours, reviews, ADDRESS_LINE, CITY_LINE, DIRECTIONS_URL, PHONE_DISPLAY, PHONE_TEL, GOOGLE_URL, publicPath } from "@/data/salon";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -46,7 +46,7 @@ function Home() {
         </div>
         <figure>
           <img
-            src="/images/bridal/bridal-portrait.jpg"
+            src={publicPath("/images/bridal/bridal-portrait.jpg")}
             alt="Editorial close-up of a South Asian bride with a nath and maang tikka. Not a client of this salon."
             width={1200}
             height={1600}
@@ -98,7 +98,7 @@ function Home() {
 
       <section className="grid lg:grid-cols-2">
         <img
-          src="/images/threading/threading-process.jpg"
+          src={publicPath("/images/threading/threading-process.jpg")}
           alt="Cotton thread shaping an eyebrow."
           width={1600}
           height={1066}
@@ -129,7 +129,7 @@ function Home() {
           </Link>
         </div>
         <img
-          src="/images/bridal/bridal-veil.jpg"
+          src={publicPath("/images/bridal/bridal-veil.jpg")}
           alt="A bride in red and gold, photographed through an embroidered veil."
           width={1600}
           height={1066}
@@ -141,7 +141,7 @@ function Home() {
       <section className="bg-champagne/50">
         <div className="mx-auto grid max-w-6xl items-center gap-10 px-5 py-16 lg:grid-cols-2">
           <img
-            src="/images/henna/mehndi-bangles.jpg"
+            src={publicPath("/images/henna/mehndi-bangles.jpg")}
             alt="Mehndi and gold bangles on a deep purple sari."
             width={1400}
             height={933}

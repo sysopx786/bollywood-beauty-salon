@@ -10,6 +10,14 @@ export const GOOGLE_URL =
   "https://www.google.com/maps/search/?api=1&query=Bollywood%20Beauty%20Salon%20Exton&query_place_id=ChIJR0E6HfX0xokRzWW3sqdI7nA";
 export const YELP_URL = "https://www.yelp.com/biz/bollywood-beauty-salon-exton";
 
+/** Prefix root-relative files when the site is served from a subpath (GitHub Pages). */
+export function publicPath(path: string) {
+  if (!path.startsWith("/") || path.startsWith("//")) return path;
+  const base = import.meta.env.BASE_URL ?? "/";
+  if (base === "/" || base === "") return path;
+  return `${base.replace(/\/$/, "")}${path}`;
+}
+
 export const hours = [
   { day: "Monday", time: "11:00 AM – 8:00 PM" },
   { day: "Tuesday", time: "11:00 AM – 8:00 PM" },
@@ -442,6 +450,24 @@ export const gallery: GalleryImage[] = [
     category: "Makeup",
   },
 ];
+
+function prefixPublicImages(value: unknown) {
+  if (Array.isArray(value)) {
+    for (const item of value) prefixPublicImages(item);
+    return;
+  }
+  if (!value || typeof value !== "object") return;
+  for (const [key, child] of Object.entries(value)) {
+    if ((key === "image" || key === "src") && typeof child === "string" && child.startsWith("/images/")) {
+      (value as Record<string, string>)[key] = publicPath(child);
+    } else {
+      prefixPublicImages(child);
+    }
+  }
+}
+
+prefixPublicImages(services);
+prefixPublicImages(gallery);
 
 export type Review = {
   id: string;
