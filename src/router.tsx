@@ -13,22 +13,7 @@ export function getRouter() {
   return createRouter({
     routeTree,
     basepath,
-    ...(basepath
-      ? {
-          trailingSlash: "always" as const,
-          rewrite: {
-            input: ({ url }) => {
-              url.pathname = url.pathname.replace(/\/index\.html\/?$/, "/");
-              return url;
-            },
-            output: ({ url }) => {
-              url.pathname = url.pathname.replace(/\/+$/, "").replace(/\/index\.html$/, "");
-              url.pathname += "/index.html";
-              return url;
-            },
-          },
-        }
-      : {}),
+    ...(basepath ? { trailingSlash: "always" as const } : {}),
     defaultErrorComponent: AppErrorComponent,
   });
 }

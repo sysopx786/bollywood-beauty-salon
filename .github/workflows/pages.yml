@@ -5,8 +5,7 @@ on:
     branches: [main]
   workflow_dispatch:
 
-permissions:
-  contents: write
+permissions: write-all
 
 concurrency:
   group: pages
@@ -30,3 +29,22 @@ jobs:
           force_orphan: true
           user_name: github-pages[bot]
           user_email: github-pages[bot]@users.noreply.github.com
+      - name: Turn on GitHub Pages
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          gh api --method POST "repos/${GITHUB_REPOSITORY}/pages" \
+            --input - <<'EOF' || true
+          {
+            "build_type": "legacy",
+            "source": { "branch": "gh-pages", "path": "/" }
+          }
+          EOF
+          gh api --method PUT "repos/${GITHUB_REPOSITORY}/pages" \
+            --input - <<'EOF' || true
+          {
+            "build_type": "legacy",
+            "source": { "branch": "gh-pages", "path": "/" },
+            "https_enforced": true
+          }
+          EOF

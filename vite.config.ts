@@ -13,7 +13,7 @@ import { appEnvPlugin } from "./scripts/app-env-plugin.mjs";
 import { isMigrationFile } from "./scripts/migration-plan.mjs";
 
 const githubPages = process.env.GITHUB_PAGES === "1";
-const pagesBase = "/gh/sysopx786/bollywood-beauty-salon@gh-pages/";
+const pagesBase = "/bollywood-beauty-salon/";
 
 /** The files `src/lib/db.ts` globs — same directory, same non-recursive scope. */
 function hasGlobbedMigrations(root: string): boolean {
