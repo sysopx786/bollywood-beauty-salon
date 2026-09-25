@@ -1,0 +1,1 @@
+import{D as e,n as t,t as n}from"./index-DCkd4M1u.js";var r=e();function i(){let{service:e}=n.useParams();return(0,r.jsx)(t,{slug:e})}export{i as component};
