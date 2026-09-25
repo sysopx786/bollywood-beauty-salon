@@ -43,6 +43,9 @@ export function Shell({ children }: { children: React.ReactNode }) {
             </span>
           </Link>
           <nav className="hidden items-center gap-5 xl:flex" aria-label="Primary">
+            <Link to="/" className="text-sm text-ink hover:text-wine">
+              Home
+            </Link>
             <div className="group relative">
               <Link to="/services" className="text-sm text-ink hover:text-wine">
                 Services
@@ -92,6 +95,11 @@ export function Shell({ children }: { children: React.ReactNode }) {
         {open ? (
           <nav id="mobile-nav" className="border-t border-ink/10 bg-ivory px-5 py-4 xl:hidden" aria-label="Mobile">
             <ul className="grid gap-1">
+              <li>
+                <Link to="/" className="block py-3 text-base" onClick={() => setOpen(false)}>
+                  Home
+                </Link>
+              </li>
               {links.map((link) => (
                 <li key={link.to}>
                   <Link

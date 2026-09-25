@@ -1,5 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { featured, getService, hours, reviews, ADDRESS_LINE, CITY_LINE, DIRECTIONS_URL, PHONE_DISPLAY, PHONE_TEL, GOOGLE_URL, publicPath, menu, formatPrice, type MenuItem } from "@/data/salon";
+import { featured, getService, hours, reviews, ADDRESS_LINE, CITY_LINE, DIRECTIONS_URL, PHONE_DISPLAY, PHONE_TEL, GOOGLE_URL, publicPath } from "@/data/salon";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -16,29 +16,6 @@ export const Route = createFileRoute("/")({
 });
 
 const trust = ["Woman-owned", "Exton, PA", "Threading", "Bridal beauty", "Facials", "Waxing", "Hair", "Henna"];
-
-const homeServices = [
-  { slug: "eyebrow-threading", label: "Eyebrow Threading" },
-  { slug: "waxing", label: "Waxing" },
-  { slug: "facials", label: "Facials" },
-  { slug: "haircuts-styling", label: "Haircuts & Styling" },
-  { slug: "hair-color", label: "Hair Color & Highlights" },
-  { slug: "hair-treatments", label: "Hair Treatments" },
-] as const;
-
-const menuGroups: { title: string; items: MenuItem[] }[] = [
-  { title: "Eyebrow Threading", items: menu.filter((item) => item.slug === "eyebrow-threading") },
-  { title: "Waxing", items: menu.filter((item) => item.slug === "waxing") },
-  { title: "Facials", items: menu.filter((item) => item.slug === "facials") },
-  { title: "Haircuts & Styling", items: menu.filter((item) => item.slug === "haircuts-styling") },
-  { title: "Hair Color & Highlights", items: menu.filter((item) => item.slug === "hair-color") },
-  { title: "Hair Treatments", items: menu.filter((item) => item.slug === "hair-treatments") },
-  { title: "Makeup", items: menu.filter((item) => item.category === "Makeup") },
-  { title: "Bridal", items: menu.filter((item) => item.category === "Bridal") },
-  { title: "Eyelashes", items: menu.filter((item) => item.category === "Lashes") },
-  { title: "Henna", items: menu.filter((item) => item.category === "Henna") },
-  { title: "Treatments", items: menu.filter((item) => item.category === "Treatments") },
-];
 
 function Home() {
   return (
@@ -59,9 +36,9 @@ function Home() {
             <Link to="/services" className="border border-ink/20 px-5 py-4 text-sm">
               View services
             </Link>
-            <a href="#menu" className="border border-ink/20 px-5 py-4 text-sm">
+            <Link to="/pricing" className="border border-ink/20 px-5 py-4 text-sm">
               Menu of services
-            </a>
+            </Link>
             <a href={DIRECTIONS_URL} className="border border-ink/20 px-5 py-4 text-sm">
               Get directions
             </a>
@@ -88,66 +65,6 @@ function Home() {
           </li>
         ))}
       </ul>
-
-      <section className="mx-auto max-w-3xl px-5 py-6" aria-labelledby="service-names">
-        <h2 id="service-names" className="sr-only">
-          Services
-        </h2>
-        <ul>
-          {homeServices.map((service) => (
-            <li key={service.slug} className="border-b border-ink/5 last:border-0">
-              <Link
-                to="/$service"
-                params={{ service: service.slug }}
-                className="block py-8 font-serif text-3xl text-ink/80 hover:text-wine sm:py-10 sm:text-4xl"
-              >
-                {service.label}
-              </Link>
-            </li>
-          ))}
-        </ul>
-      </section>
-
-      <section id="menu" className="scroll-mt-24 border-t border-ink/10" aria-labelledby="menu-heading">
-        <div className="mx-auto max-w-5xl px-5 py-20">
-          <p className="text-xs tracking-widest text-wine uppercase">Current menu</p>
-          <div className="mt-3 flex flex-wrap items-end justify-between gap-4">
-            <h2 id="menu-heading" className="font-serif text-4xl sm:text-5xl">
-              Menu of services
-            </h2>
-            <Link to="/pricing" className="text-sm text-wine">
-              Search the full menu
-            </Link>
-          </div>
-          <p className="mt-4 max-w-xl text-ink/70">
-            These amounts are from the photographed current menu. “Starting at” is not a flat quote.
-          </p>
-          <div className="mt-16 grid gap-x-20 gap-y-16 lg:grid-cols-2">
-            {menuGroups.map((group) => (
-              <section key={group.title}>
-                <h3 className="font-serif text-2xl text-wine">{group.title}</h3>
-                <ul className="mt-5">
-                  {group.items.map((item) => (
-                    <li key={item.id} className="flex items-start justify-between gap-8 border-b border-ink/10 py-4">
-                      <span>
-                        <Link
-                          to="/$service"
-                          params={{ service: item.slug }}
-                          className="hover:text-wine"
-                        >
-                          {item.name}
-                        </Link>
-                        {item.note ? <span className="mt-1 block max-w-sm text-xs leading-relaxed text-ink/55">{item.note}</span> : null}
-                      </span>
-                      <span className="shrink-0 pt-0.5 text-sm text-ink/70">{formatPrice(item)}</span>
-                    </li>
-                  ))}
-                </ul>
-              </section>
-            ))}
-          </div>
-        </div>
-      </section>
 
       <section className="mx-auto max-w-6xl px-5 py-16" aria-labelledby="signature">
         <h2 id="signature" className="font-serif text-4xl">

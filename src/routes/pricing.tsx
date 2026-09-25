@@ -52,6 +52,11 @@ function PricingPage() {
         title="Menu of services"
         lede="These amounts are from the photographed current menu. Older brochures are not mixed in. “Starting at” is not a flat quote."
       />
+      <div className="mx-auto max-w-3xl px-5 pb-4">
+        <Link to="/" className="inline-flex border border-ink/20 px-5 py-3 text-sm">
+          Home
+        </Link>
+      </div>
       <div className="mx-auto max-w-3xl px-5 pb-16">
         <label className="block text-sm" htmlFor="price-search">
           Search the menu
