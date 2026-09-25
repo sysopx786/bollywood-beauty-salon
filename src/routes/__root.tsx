@@ -57,7 +57,7 @@ function NotFound() {
           <Link to="/services">Services</Link>
         </li>
         <li>
-          <Link to="/pricing">Pricing</Link>
+          <Link to="/pricing">Menu of services</Link>
         </li>
         <li>
           <Link to="/contact">Contact</Link>

@@ -14,7 +14,7 @@ import {
 const links = [
   { to: "/services", label: "Services" },
   { to: "/bridal", label: "Bridal" },
-  { to: "/pricing", label: "Pricing" },
+  { to: "/pricing", label: "Menu of services" },
   { to: "/gallery", label: "Gallery" },
   { to: "/reviews", label: "Reviews" },
   { to: "/about", label: "About" },
@@ -42,7 +42,7 @@ export function Shell({ children }: { children: React.ReactNode }) {
               Woman-owned · Exton, PA
             </span>
           </Link>
-          <nav className="hidden items-center gap-5 lg:flex" aria-label="Primary">
+          <nav className="hidden items-center gap-5 xl:flex" aria-label="Primary">
             <div className="group relative">
               <Link to="/services" className="text-sm text-ink hover:text-wine">
                 Services
@@ -79,7 +79,7 @@ export function Shell({ children }: { children: React.ReactNode }) {
             </a>
             <button
               type="button"
-              className="inline-flex size-11 items-center justify-center border border-ink/15 lg:hidden"
+              className="inline-flex size-11 items-center justify-center border border-ink/15 xl:hidden"
               aria-expanded={open}
               aria-controls="mobile-nav"
               onClick={() => setOpen((value) => !value)}
@@ -90,7 +90,7 @@ export function Shell({ children }: { children: React.ReactNode }) {
           </div>
         </div>
         {open ? (
-          <nav id="mobile-nav" className="border-t border-ink/10 bg-ivory px-5 py-4 lg:hidden" aria-label="Mobile">
+          <nav id="mobile-nav" className="border-t border-ink/10 bg-ivory px-5 py-4 xl:hidden" aria-label="Mobile">
             <ul className="grid gap-1">
               {links.map((link) => (
                 <li key={link.to}>
@@ -152,7 +152,7 @@ export function Shell({ children }: { children: React.ReactNode }) {
             <ul className="mt-3 grid gap-2 text-sm">
               <li>
                 <Link to="/pricing" className="text-ivory/85 hover:text-ivory">
-                  Pricing
+                  Menu of services
                 </Link>
               </li>
               <li>
@@ -198,16 +198,16 @@ export function Shell({ children }: { children: React.ReactNode }) {
         </p>
       </footer>
       <div className="fixed inset-x-0 bottom-0 z-40 flex border-t border-ink/10 bg-ivory md:hidden">
-        <a href={`tel:${PHONE_TEL}`} className="flex flex-1 items-center justify-center gap-2 py-4 text-sm font-medium text-wine">
-          <Phone className="size-4" aria-hidden="true" />
+        <a href={`tel:${PHONE_TEL}`} className="flex flex-1 items-center justify-center gap-2 py-4 text-sm font-medium text-ink">
+          <Phone className="size-5 text-leaf" aria-hidden="true" />
           Call salon
         </a>
-        <a
-          href={DIRECTIONS_URL}
+        <Link
+          to="/pricing"
           className="flex flex-1 items-center justify-center border-l border-ink/10 py-4 text-sm font-medium"
         >
-          Directions
-        </a>
+          Menu services
+        </Link>
       </div>
     </>
   );

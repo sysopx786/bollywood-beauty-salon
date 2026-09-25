@@ -6,7 +6,7 @@ import { categories, formatPrice, menu, type MenuItem } from "@/data/salon";
 export const Route = createFileRoute("/pricing")({
   head: () => ({
     meta: [
-      { title: "Pricing | Bollywood Beauty Salon, Exton" },
+      { title: "Menu of services | Bollywood Beauty Salon, Exton" },
       {
         name: "description",
         content:
@@ -49,7 +49,7 @@ function PricingPage() {
     <main>
       <PageIntro
         kicker="Current menu"
-        title="Every price, from one list."
+        title="Menu of services"
         lede="These amounts are from the photographed current menu. Older brochures are not mixed in. “Starting at” is not a flat quote."
       />
       <div className="mx-auto max-w-3xl px-5 pb-16">

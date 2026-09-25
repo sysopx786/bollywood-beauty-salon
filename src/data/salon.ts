@@ -568,7 +568,7 @@ export const faqs = [
   },
   {
     q: "Do you thread men’s eyebrows and full faces?",
-    a: "Yes. Men’s eyebrows are $12. Full-face threading is $35. Chin, neck, sideburns, and forehead are listed separately on the pricing page.",
+    a: "Yes. Men’s eyebrows are $12. Full-face threading is $35. Chin, neck, sideburns, and forehead are listed separately on the menu of services.",
   },
   {
     q: "Do you offer Brazilian waxing?",
