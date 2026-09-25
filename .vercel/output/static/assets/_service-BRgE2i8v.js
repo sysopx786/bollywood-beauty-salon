@@ -1,0 +1,1 @@
+import{n as e,t,w as n}from"./index-CaHljAkH.js";var r=n();function i(){let{service:n}=t.useParams();return(0,r.jsx)(e,{slug:n})}export{i as component};

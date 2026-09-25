@@ -1,0 +1,31 @@
+
+> preview
+> node scripts/with-app-env.mjs vite preview
+
+
+ ╭────────── [Build Info] ─────────────╮
+ │                                     │
+ │  - Build Directory: .vercel/output  │
+ │  - Date: 9/25/2026, 2:23:06 PM      │
+ │  - Nitro Version: 3.0.260610-beta   │
+ │  - Nitro Preset: vercel             │
+ │                                     │
+ ╰─────────────────────────────────────╯
+
+  ➜  Local:   http://127.0.0.1:8081/
+Error in renderToReadableStream: { isNotFound: true } { componentStack: [Getter] }
+
+> preview
+> node scripts/with-app-env.mjs vite preview
+
+
+ ╭────────── [Build Info] ─────────────╮
+ │                                     │
+ │  - Build Directory: .vercel/output  │
+ │  - Date: 9/25/2026, 2:26:09 PM      │
+ │  - Nitro Version: 3.0.260610-beta   │
+ │  - Nitro Preset: vercel             │
+ │                                     │
+ ╰─────────────────────────────────────╯
+
+  ➜  Local:   http://127.0.0.1:8081/

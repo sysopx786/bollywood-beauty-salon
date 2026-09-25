@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <style>
+    @font-face {
+      font-family: "Cormorant";
+      src: url("/workspace/.grok/og-fonts/CormorantGaramond.ttf") format("truetype");
+      font-weight: 300 700;
+      font-style: normal;
+      font-display: block;
+    }
+    @font-face {
+      font-family: "Cormorant";
+      src: url("/workspace/.grok/og-fonts/CormorantGaramond-Italic.ttf") format("truetype");
+      font-weight: 300 700;
+      font-style: italic;
+      font-display: block;
+    }
+    @font-face {
+      font-family: "Cinzel";
+      src: url("/workspace/.grok/og-fonts/Cinzel.ttf") format("truetype");
+      font-weight: 400 700;
+      font-style: normal;
+      font-display: block;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    html, body {
+      width: 1200px;
+      height: 630px;
+      overflow: hidden;
+      background: #5C1A2E;
+    }
+
+    .card {
+      width: 1200px;
+      height: 630px;
+      display: flex;
+      position: relative;
+      background: #5C1A2E;
+    }
+
+    .wine {
+      width: 792px;
+      height: 630px;
+      position: relative;
+      background:
+        radial-gradient(ellipse 90% 80% at 38% 46%, #6a2436 0%, #5C1A2E 58%, #421422 100%);
+      color: #F6F1E8;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 0 72px 0 80px;
+    }
+
+    .ivory {
+      width: 408px;
+      height: 630px;
+      background:
+        linear-gradient(180deg, #F8F4EC 0%, #F6F1E8 48%, #EFE6D8 100%);
+      color: #5C1A2E;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 0 48px 0 52px;
+      position: relative;
+    }
+
+    .rule-v {
+      position: absolute;
+      left: 0;
+      top: 48px;
+      bottom: 48px;
+      width: 1px;
+      background: #A68B5B;
+    }
+
+    .kicker {
+      font-family: Cinzel, "Times New Roman", serif;
+      font-weight: 500;
+      font-size: 15px;
+      letter-spacing: 0.42em;
+      text-transform: uppercase;
+      color: #E7D7C1;
+      padding-left: 0.42em;
+      margin-bottom: 28px;
+    }
+
+    .name {
+      font-family: Cormorant, Georgia, serif;
+      font-style: italic;
+      font-weight: 500;
+      font-size: 104px;
+      line-height: 0.84;
+      letter-spacing: -0.015em;
+      color: #F6F1E8;
+    }
+
+    .sub {
+      font-family: Cormorant, Georgia, serif;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 58px;
+      line-height: 1;
+      letter-spacing: 0.045em;
+      color: #F6F1E8;
+      margin-top: 14px;
+    }
+
+    .rule-h {
+      width: 72px;
+      height: 1px;
+      background: #A68B5B;
+      margin-top: 32px;
+    }
+
+    .place {
+      font-family: Cinzel, "Times New Roman", serif;
+      font-weight: 500;
+      font-size: 22px;
+      line-height: 1.45;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: #5C1A2E;
+      padding-left: 0.16em;
+    }
+
+    .place span {
+      display: block;
+    }
+
+    .place .city {
+      color: #5C1A2E;
+    }
+
+    .hair {
+      width: 36px;
+      height: 1px;
+      background: #A68B5B;
+      margin-bottom: 22px;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <section class="wine">
+      <p class="kicker">Woman-Owned</p>
+      <h1 class="name">Bollywood</h1>
+      <p class="sub">Beauty Salon</p>
+      <div class="rule-h"></div>
+    </section>
+    <aside class="ivory">
+      <div class="rule-v"></div>
+      <div class="hair"></div>
+      <p class="place">
+        <span class="city">Exton,</span>
+        <span>Pennsylvania</span>
+      </p>
+    </aside>
+  </div>
+</body>
+</html>
