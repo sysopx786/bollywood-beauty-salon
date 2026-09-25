@@ -1,7 +1,7 @@
 import { createRootRoute, HeadContent, Link, Outlet, Scripts } from "@tanstack/react-router";
 import { AuthProvider } from "@/lib/auth/provider";
 import { PreviewHostBridge } from "@/components/preview-host-bridge";
-import { Shell } from "@/components/shell";
+import { Shell, MenuCue } from "@/components/shell";
 import { PHONE_DISPLAY, PHONE_TEL, publicPath } from "@/data/salon";
 import appCss from "../styles.css?url";
 
@@ -57,7 +57,9 @@ function NotFound() {
           <Link to="/services">Services</Link>
         </li>
         <li>
-          <Link to="/pricing">Menu of services</Link>
+          <Link to="/pricing">
+            <MenuCue>Menu of services</MenuCue>
+          </Link>
         </li>
         <li>
           <Link to="/contact">Contact</Link>

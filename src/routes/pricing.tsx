@@ -1,6 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { useMemo, useState } from "react";
-import { CallBand, PageIntro } from "@/components/shell";
+import { CallBand, MenuCue, PageIntro } from "@/components/shell";
 import { categories, formatPrice, menu, type MenuItem } from "@/data/salon";
 
 export const Route = createFileRoute("/pricing")({
@@ -48,13 +48,13 @@ function PricingPage() {
   return (
     <main>
       <PageIntro
-        kicker="Current menu"
-        title="Menu of services"
+        kicker={<MenuCue>Current menu</MenuCue>}
+        title={<MenuCue large>Menu of services</MenuCue>}
         lede="These amounts are from the photographed current menu. Older brochures are not mixed in. “Starting at” is not a flat quote."
       />
       <div className="mx-auto max-w-3xl px-5 pb-16">
-        <label className="block text-sm" htmlFor="price-search">
-          Search the menu
+        <label className="block" htmlFor="price-search">
+          <MenuCue>Search the menu</MenuCue>
         </label>
         <input
           id="price-search"

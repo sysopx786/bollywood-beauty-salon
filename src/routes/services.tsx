@@ -1,5 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { CallBand, PageIntro } from "@/components/shell";
+import { CallBand, MenuCue, PageIntro } from "@/components/shell";
 import { services } from "@/data/salon";
 
 export const Route = createFileRoute("/services")({
@@ -20,7 +20,11 @@ function ServicesPage() {
   return (
     <main>
       <PageIntro
-        kicker="The menu"
+        kicker={
+          <Link to="/pricing">
+            <MenuCue>The menu</MenuCue>
+          </Link>
+        }
         title="Services, with the prices printed beside them."
         lede="Bollywood Beauty Salon is a woman-owned salon in Exton. Every page below uses the current menu. Older brochure items are not listed."
       />

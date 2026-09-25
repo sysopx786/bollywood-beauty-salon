@@ -1,6 +1,6 @@
 import { Link } from "@tanstack/react-router";
 import { formatPrice, getService, itemsFor, services } from "@/data/salon";
-import { CallBand } from "@/components/shell";
+import { CallBand, MenuCue } from "@/components/shell";
 
 export function metaFor(slug: string) {
   const page = getService(slug);
@@ -41,8 +41,8 @@ export function ServicePage({ slug }: { slug: string }) {
       </header>
       <section className="bg-champagne/40" aria-labelledby="prices-heading">
         <div className="mx-auto max-w-3xl px-5 py-12">
-          <h2 id="prices-heading" className="font-serif text-3xl">
-            Menu prices
+          <h2 id="prices-heading">
+            <MenuCue large>Menu prices</MenuCue>
           </h2>
           <ul className="mt-6 divide-y divide-ink/10 border-y border-ink/10">
             {items.map((item) => (

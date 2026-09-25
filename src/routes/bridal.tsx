@@ -1,5 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { CallBand } from "@/components/shell";
+import { CallBand, MenuCue } from "@/components/shell";
 import { PHONE_DISPLAY, PHONE_TEL, publicPath } from "@/data/salon";
 
 export const Route = createFileRoute("/bridal")({
@@ -77,8 +77,8 @@ function BridalPage() {
               Bridal makeup details
             </Link>
             <span className="px-2 text-ink/40">/</span>
-            <Link to="/$service" params={{ service: "henna-mehndi" }} className="text-wine">
-              Henna menu
+            <Link to="/$service" params={{ service: "henna-mehndi" }}>
+              <MenuCue>Henna menu</MenuCue>
             </Link>
             <span className="px-2 text-ink/40">/</span>
             <Link to="/$service" params={{ service: "party-makeup" }} className="text-wine">
