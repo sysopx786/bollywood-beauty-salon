@@ -4,7 +4,7 @@ Woman-owned salon at 418 W Lincoln Hwy, Exton, PA 19341. Phone [(610) 363-1244](
 
 **Public website:** [https://sysopx786.github.io/bollywood-beauty-salon/](https://sysopx786.github.io/bollywood-beauty-salon/)
 
-This repository is **private**. The notes below are for the owner. Do not paste the private section onto the public website.
+This repository is **public** so the website can be hosted. The notes below are for the owner. Do not paste the private section onto the public website.
 
 ## Readme notes
 
@@ -57,7 +57,7 @@ Keep these off the public site.
 
 | What | Link | Why it stays private |
 |---|---|---|
-| This repository | [github.com/sysopx786/bollywood-beauty-salon](https://github.com/sysopx786/bollywood-beauty-salon) | Private source |
+| This repository | [github.com/sysopx786/bollywood-beauty-salon](https://github.com/sysopx786/bollywood-beauty-salon) | Public source. Do not treat this as a page on the salon site. |
 | Repository settings | [Settings](https://github.com/sysopx786/bollywood-beauty-salon/settings) | Owner only |
 | Pages settings | [Settings → Pages](https://github.com/sysopx786/bollywood-beauty-salon/settings/pages) | Not a public website yet |
 
