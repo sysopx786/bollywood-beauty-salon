@@ -1,5 +1,4 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { MenuCue } from "@/components/shell";
 import { featured, getService, hours, reviews, ADDRESS_LINE, CITY_LINE, DIRECTIONS_URL, PHONE_DISPLAY, PHONE_TEL, GOOGLE_URL, publicPath, menu, formatPrice, type MenuItem } from "@/data/salon";
 
 export const Route = createFileRoute("/")({
@@ -60,8 +59,8 @@ function Home() {
             <Link to="/services" className="border border-ink/20 px-5 py-4 text-sm">
               View services
             </Link>
-            <a href="#menu">
-              <MenuCue>Menu of services</MenuCue>
+            <a href="#menu" className="border border-ink/20 px-5 py-4 text-sm">
+              Menu of services
             </a>
             <a href={DIRECTIONS_URL} className="border border-ink/20 px-5 py-4 text-sm">
               Get directions
@@ -111,13 +110,13 @@ function Home() {
 
       <section id="menu" className="scroll-mt-24 border-t border-ink/10" aria-labelledby="menu-heading">
         <div className="mx-auto max-w-5xl px-5 py-20">
-          <MenuCue>Current menu</MenuCue>
+          <p className="text-xs tracking-widest text-wine uppercase">Current menu</p>
           <div className="mt-3 flex flex-wrap items-end justify-between gap-4">
-            <h2 id="menu-heading">
-              <MenuCue large>Menu of services</MenuCue>
+            <h2 id="menu-heading" className="font-serif text-4xl sm:text-5xl">
+              Menu of services
             </h2>
-            <Link to="/pricing">
-              <MenuCue>Search the full menu</MenuCue>
+            <Link to="/pricing" className="text-sm text-wine">
+              Search the full menu
             </Link>
           </div>
           <p className="mt-4 max-w-xl text-ink/70">
@@ -238,8 +237,8 @@ function Home() {
             <p className="mt-4 text-ink/75">
               Henna starts at $10. Bridal henna starts at $150. Henna for hair starts at $35.
             </p>
-            <Link to="/$service" params={{ service: "henna-mehndi" }}>
-              <MenuCue>Henna menu</MenuCue>
+            <Link to="/$service" params={{ service: "henna-mehndi" }} className="mt-6 inline-block text-sm text-wine">
+              Henna menu
             </Link>
           </div>
         </div>

@@ -1,5 +1,5 @@
 import { Link } from "@tanstack/react-router";
-import { ClipboardList, Menu, Phone, X } from "lucide-react";
+import { Menu, Phone, X } from "lucide-react";
 import { useState } from "react";
 import {
   ADDRESS_LINE,
@@ -63,17 +63,11 @@ export function Shell({ children }: { children: React.ReactNode }) {
                 </ul>
               </div>
             </div>
-            {links.slice(1).map((link) =>
-              link.to === "/pricing" ? (
-                <Link key={link.to} to={link.to}>
-                  <MenuCue>{link.label}</MenuCue>
-                </Link>
-              ) : (
-                <Link key={link.to} to={link.to} className="text-sm text-ink hover:text-wine">
-                  {link.label}
-                </Link>
-              ),
-            )}
+            {links.slice(1).map((link) => (
+              <Link key={link.to} to={link.to} className="text-sm text-ink hover:text-wine">
+                {link.label}
+              </Link>
+            ))}
           </nav>
           <div className="flex items-center gap-2">
             <a
@@ -102,10 +96,10 @@ export function Shell({ children }: { children: React.ReactNode }) {
                 <li key={link.to}>
                   <Link
                     to={link.to}
-                    className={link.to === "/pricing" ? "inline-flex py-2" : "block py-3 text-base"}
+                    className="block py-3 text-base"
                     onClick={() => setOpen(false)}
                   >
-                    {link.to === "/pricing" ? <MenuCue>{link.label}</MenuCue> : link.label}
+                    {link.label}
                   </Link>
                 </li>
               ))}
@@ -157,8 +151,8 @@ export function Shell({ children }: { children: React.ReactNode }) {
             <p className="text-xs tracking-widest text-champagne uppercase">Visit</p>
             <ul className="mt-3 grid gap-2 text-sm">
               <li>
-                <Link to="/pricing">
-                  <MenuCue>Menu of services</MenuCue>
+                <Link to="/pricing" className="text-ivory/85 hover:text-ivory">
+                  Menu of services
                 </Link>
               </li>
               <li>
@@ -210,28 +204,12 @@ export function Shell({ children }: { children: React.ReactNode }) {
         </a>
         <Link
           to="/pricing"
-          className="menu-flash flex flex-1 items-center justify-center gap-2 border-l border-wine/30 py-4 text-lg font-medium text-wine"
+          className="menu-flash flex flex-1 items-center justify-center border-l border-wine/30 py-4 text-sm font-medium text-wine"
         >
-          <ClipboardList className="size-5 shrink-0" aria-hidden="true" />
           Menu services
         </Link>
       </div>
     </>
-  );
-}
-
-export function MenuCue({ children, large = false }: { children: React.ReactNode; large?: boolean }) {
-  return (
-    <span
-      className={
-        large
-          ? "menu-flash inline-flex items-center gap-3 px-4 py-2 font-serif text-4xl leading-none font-normal sm:text-5xl"
-          : "menu-flash inline-flex items-center gap-2 px-3 py-1.5 text-lg font-medium"
-      }
-    >
-      <ClipboardList className={large ? "size-8 shrink-0" : "size-5 shrink-0"} aria-hidden="true" />
-      {children}
-    </span>
   );
 }
 
@@ -240,8 +218,8 @@ export function PageIntro({
   title,
   lede,
 }: {
-  kicker: React.ReactNode;
-  title: React.ReactNode;
+  kicker: string;
+  title: string;
   lede: string;
 }) {
   return (
