@@ -1,6 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { CallBand } from "@/components/shell";
-import { ADDRESS_LINE, CITY_LINE, hours, PHONE_DISPLAY, PHONE_TEL, publicPath } from "@/data/salon";
+import { hours, PHONE_DISPLAY, PHONE_TEL, publicPath } from "@/data/salon";
+import { SalonAddress } from "@/components/place-links";
 
 export const Route = createFileRoute("/about")({
   head: () => ({
@@ -24,7 +25,7 @@ function AboutPage() {
           <p className="text-xs tracking-widest text-wine uppercase">Woman-owned</p>
           <h1 className="mt-4 font-serif text-5xl leading-none">A salon in Exton, kept by a woman who owns it.</h1>
           <p className="mt-5 text-lg text-ink/75">
-            Bollywood Beauty Salon is a woman-owned beauty salon at {ADDRESS_LINE}, {CITY_LINE}. Guests come for threading, waxing, facials, hair, makeup, and henna.
+            Bollywood Beauty Salon is a woman-owned beauty salon at <SalonAddress variant="inline" />. Guests come for threading, waxing, facials, hair, makeup, and henna.
           </p>
         </div>
         <figure>

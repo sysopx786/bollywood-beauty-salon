@@ -1,6 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { CallBand, PageIntro } from "@/components/shell";
-import { faqs } from "@/data/salon";
+import { SalonAddress } from "@/components/place-links";
+import { ADDRESS_LINE, CITY_LINE, faqs } from "@/data/salon";
 
 export const Route = createFileRoute("/faq")({
   head: () => ({
@@ -16,6 +17,19 @@ export const Route = createFileRoute("/faq")({
   component: FaqPage,
 });
 
+function FaqAnswer({ text }: { text: string }) {
+  const address = `${ADDRESS_LINE}, ${CITY_LINE}`;
+  if (!text.includes(address)) return text;
+  const [before, after] = text.split(address);
+  return (
+    <>
+      {before}
+      <SalonAddress variant="inline" />
+      {after}
+    </>
+  );
+}
+
 function FaqPage() {
   return (
     <main>
@@ -28,7 +42,9 @@ function FaqPage() {
         {faqs.map((item) => (
           <details key={item.q} className="group border-b border-ink/10 py-4">
             <summary className="cursor-pointer font-serif text-xl">{item.q}</summary>
-            <p className="pt-3 text-ink/80">{item.a}</p>
+            <p className="pt-3 text-ink/80">
+              <FaqAnswer text={item.a} />
+            </p>
           </details>
         ))}
       </div>

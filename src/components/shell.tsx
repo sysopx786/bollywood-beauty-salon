@@ -1,15 +1,8 @@
 import { Link } from "@tanstack/react-router";
 import { Menu, Phone, X } from "lucide-react";
 import { useState } from "react";
-import {
-  ADDRESS_LINE,
-  CITY_LINE,
-  DIRECTIONS_URL,
-  PHONE_DISPLAY,
-  PHONE_TEL,
-  hours,
-  services,
-} from "@/data/salon";
+import { SalonAddress, DirectionsLink } from "@/components/place-links";
+import { PHONE_DISPLAY, PHONE_TEL, hours, services } from "@/data/salon";
 
 const links = [
   { to: "/services", label: "Services" },
@@ -136,9 +129,7 @@ export function Shell({ children }: { children: React.ReactNode }) {
               A woman-owned beauty salon in Exton, Pennsylvania. Threading, bridal beauty, facials, waxing, hair, and henna.
             </p>
             <p className="mt-4 text-sm">
-              {ADDRESS_LINE}
-              <br />
-              {CITY_LINE}
+              <SalonAddress tone="dark" />
             </p>
             <a href={`tel:${PHONE_TEL}`} className="mt-3 inline-block text-sm text-champagne">
               {PHONE_DISPLAY}
@@ -179,9 +170,7 @@ export function Shell({ children }: { children: React.ReactNode }) {
                 </Link>
               </li>
               <li>
-                <a href={DIRECTIONS_URL} className="text-ivory/85 hover:text-ivory">
-                  Directions
-                </a>
+                <DirectionsLink tone="dark">Directions</DirectionsLink>
               </li>
               <li>
                 <Link to="/privacy" className="text-ivory/85 hover:text-ivory">

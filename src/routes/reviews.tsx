@@ -1,7 +1,8 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useMemo, useState } from "react";
 import { CallBand, PageIntro } from "@/components/shell";
-import { GOOGLE_URL, reviews, YELP_URL, type Review } from "@/data/salon";
+import { GoogleReviewsLink, GoogleWord } from "@/components/place-links";
+import { reviews, YELP_URL, type Review } from "@/data/salon";
 
 export const Route = createFileRoute("/reviews")({
   head: () => ({
@@ -42,9 +43,9 @@ function ReviewsPage() {
       />
       <div className="mx-auto max-w-3xl px-5 pb-16">
         <p className="flex flex-wrap gap-4 text-sm">
-          <a href={GOOGLE_URL} className="text-wine underline underline-offset-4">
-            Open Google
-          </a>
+          <GoogleReviewsLink>
+            Open <GoogleWord />
+          </GoogleReviewsLink>
           <a href={YELP_URL} className="text-wine underline underline-offset-4">
             Open Yelp
           </a>
@@ -99,7 +100,17 @@ function ReviewCard({ review }: { review: Review }) {
       <blockquote>
         <p className="leading-relaxed">“{review.excerpt}”</p>
         <footer className="mt-4 text-xs text-ink/60">
-          {review.name} · {review.source} · {review.date}
+          {review.name}
+          {" · "}
+          {review.source === "Google" ? (
+            <GoogleReviewsLink className="align-middle">
+              <GoogleWord />
+            </GoogleReviewsLink>
+          ) : (
+            review.source
+          )}
+          {" · "}
+          {review.date}
         </footer>
       </blockquote>
     </li>

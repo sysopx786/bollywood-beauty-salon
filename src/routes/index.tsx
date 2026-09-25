@@ -1,5 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { featured, getService, hours, reviews, ADDRESS_LINE, CITY_LINE, DIRECTIONS_URL, PHONE_DISPLAY, PHONE_TEL, GOOGLE_URL, publicPath } from "@/data/salon";
+import { featured, getService, hours, reviews, PHONE_DISPLAY, PHONE_TEL, publicPath } from "@/data/salon";
+import { DirectionsLink, GoogleReviewsLink, GoogleWord, SalonAddress } from "@/components/place-links";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -39,9 +40,7 @@ function Home() {
             <Link to="/pricing" className="border border-ink/20 px-5 py-4 text-sm">
               Menu of services
             </Link>
-            <a href={DIRECTIONS_URL} className="border border-ink/20 px-5 py-4 text-sm">
-              Get directions
-            </a>
+            <DirectionsLink className="border border-[#1a73e8]/30 px-5 py-4 text-sm">Get directions</DirectionsLink>
           </div>
         </div>
         <figure>
@@ -176,18 +175,24 @@ function Home() {
               <blockquote>
                 <p className="text-sm leading-relaxed">“{review.excerpt}”</p>
                 <footer className="mt-4 text-xs text-ink/60">
-                  {review.name} · {review.source} · {review.date}
+                  {review.name}
+                  {" · "}
+                  {review.source === "Google" ? (
+                    <GoogleReviewsLink className="align-middle">
+                      <GoogleWord />
+                    </GoogleReviewsLink>
+                  ) : (
+                    review.source
+                  )}
+                  {" · "}
+                  {review.date}
                 </footer>
               </blockquote>
             </li>
           ))}
         </ul>
         <p className="mt-4 text-xs text-ink/60">
-          Short public excerpts.{" "}
-          <a href={GOOGLE_URL} className="underline">
-            Read more on Google
-          </a>
-          . This page does not publish an overall star rating.
+          Short public excerpts. <GoogleReviewsLink>Read more on <GoogleWord /></GoogleReviewsLink>. This page does not publish an overall star rating.
         </p>
       </section>
 
@@ -200,9 +205,7 @@ function Home() {
             <p className="mt-4 text-lg">
               Bollywood Beauty Salon
               <br />
-              {ADDRESS_LINE}
-              <br />
-              {CITY_LINE}
+              <SalonAddress />
             </p>
             <a href={`tel:${PHONE_TEL}`} className="mt-4 inline-block text-wine">
               {PHONE_DISPLAY}

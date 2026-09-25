@@ -1,17 +1,8 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useState } from "react";
 import { PageIntro } from "@/components/shell";
-import {
-  ADDRESS_LINE,
-  CITY_LINE,
-  DIRECTIONS_URL,
-  GOOGLE_URL,
-  hours,
-  MAP_EMBED,
-  PHONE_DISPLAY,
-  PHONE_TEL,
-  YELP_URL,
-} from "@/data/salon";
+import { DirectionsLink, GoogleReviewsLink, GoogleWord, SalonAddress } from "@/components/place-links";
+import { hours, MAP_EMBED, PHONE_DISPLAY, PHONE_TEL, YELP_URL } from "@/data/salon";
 
 export const Route = createFileRoute("/contact")({
   head: () => ({
@@ -57,17 +48,13 @@ function ContactPage() {
         <div>
           <p className="font-serif text-2xl">Bollywood Beauty Salon</p>
           <p className="mt-2">
-            {ADDRESS_LINE}
-            <br />
-            {CITY_LINE}
+            <SalonAddress />
           </p>
           <a href={`tel:${PHONE_TEL}`} className="mt-3 inline-block text-lg text-wine">
             {PHONE_DISPLAY}
           </a>
           <p className="mt-2 text-sm">
-            <a href={DIRECTIONS_URL} className="text-wine">
-              Directions
-            </a>
+            <DirectionsLink />
           </p>
           <ul className="mt-6 grid gap-1 text-sm">
             {hours.map((row) => (
@@ -79,9 +66,9 @@ function ContactPage() {
           </ul>
           <p className="mt-6 text-sm text-ink/70">
             Public reviews:{" "}
-            <a href={GOOGLE_URL} className="text-wine">
-              Google
-            </a>
+            <GoogleReviewsLink>
+              <GoogleWord /> reviews
+            </GoogleReviewsLink>
             {" · "}
             <a href={YELP_URL} className="text-wine">
               Yelp
