@@ -2,7 +2,7 @@
 
 Woman-owned salon at 418 W Lincoln Hwy, Exton, PA 19341. Phone [(610) 363-1244](tel:+16103631244).
 
-**Public website:** [https://sysopx786.github.io/bollywood-beauty-salon/](https://sysopx786.github.io/bollywood-beauty-salon/)
+**Public website:** [https://cdn.jsdelivr.net/gh/sysopx786/bollywood-beauty-salon@gh-pages/](https://cdn.jsdelivr.net/gh/sysopx786/bollywood-beauty-salon@gh-pages/)
 
 This repository is **public** so the website can be hosted. The notes below are for the owner. Do not paste the private section onto the public website.
 
@@ -14,7 +14,7 @@ These are the links the public site may use.
 
 | What | Link |
 |---|---|
-| Website | [sysopx786.github.io/bollywood-beauty-salon](https://sysopx786.github.io/bollywood-beauty-salon/) |
+| Website | [cdn.jsdelivr.net/gh/sysopx786/bollywood-beauty-salon@gh-pages](https://cdn.jsdelivr.net/gh/sysopx786/bollywood-beauty-salon@gh-pages/) |
 | Call | [tel:+16103631244](tel:+16103631244) |
 | Google listing | [Bollywood Beauty Salon, Exton](https://www.google.com/maps/search/?api=1&query=Bollywood%20Beauty%20Salon%20Exton&query_place_id=ChIJR0E6HfX0xokRzWW3sqdI7nA) |
 | Directions | [418 W Lincoln Hwy, Exton, PA 19341](https://www.google.com/maps/dir/?api=1&destination=418+W+Lincoln+Hwy,+Exton,+PA+19341) |
@@ -23,31 +23,31 @@ These are the links the public site may use.
 
 | Page | Link |
 |---|---|
-| Home | [Home](https://sysopx786.github.io/bollywood-beauty-salon/) |
-| Services | [Services](https://sysopx786.github.io/bollywood-beauty-salon/services) |
-| Eyebrow threading | [Eyebrow threading](https://sysopx786.github.io/bollywood-beauty-salon/eyebrow-threading) |
-| Waxing | [Waxing](https://sysopx786.github.io/bollywood-beauty-salon/waxing) |
-| Facials | [Facials](https://sysopx786.github.io/bollywood-beauty-salon/facials) |
-| Haircuts and styling | [Haircuts and styling](https://sysopx786.github.io/bollywood-beauty-salon/haircuts-styling) |
-| Hair color and highlights | [Hair color and highlights](https://sysopx786.github.io/bollywood-beauty-salon/hair-color) |
-| Hair treatments | [Hair treatments](https://sysopx786.github.io/bollywood-beauty-salon/hair-treatments) |
-| Bridal makeup | [Bridal makeup](https://sysopx786.github.io/bollywood-beauty-salon/bridal-makeup) |
-| Party and event makeup | [Party and event makeup](https://sysopx786.github.io/bollywood-beauty-salon/party-makeup) |
-| Eyelashes | [Eyelashes](https://sysopx786.github.io/bollywood-beauty-salon/eyelashes) |
-| Henna / mehndi | [Henna / mehndi](https://sysopx786.github.io/bollywood-beauty-salon/henna-mehndi) |
-| Massage and beauty treatments | [Massage and beauty treatments](https://sysopx786.github.io/bollywood-beauty-salon/beauty-treatments) |
-| Bridal | [Bridal](https://sysopx786.github.io/bollywood-beauty-salon/bridal) |
-| Pricing | [Pricing](https://sysopx786.github.io/bollywood-beauty-salon/pricing) |
-| Gallery | [Gallery](https://sysopx786.github.io/bollywood-beauty-salon/gallery) |
-| Before and after | [Before and after](https://sysopx786.github.io/bollywood-beauty-salon/before-and-after) |
-| Reviews | [Reviews](https://sysopx786.github.io/bollywood-beauty-salon/reviews) |
-| About | [About](https://sysopx786.github.io/bollywood-beauty-salon/about) |
-| FAQ | [FAQ](https://sysopx786.github.io/bollywood-beauty-salon/faq) |
-| Contact | [Contact](https://sysopx786.github.io/bollywood-beauty-salon/contact) |
-| Privacy | [Privacy](https://sysopx786.github.io/bollywood-beauty-salon/privacy) |
-| Terms | [Terms](https://sysopx786.github.io/bollywood-beauty-salon/terms) |
-| Accessibility | [Accessibility](https://sysopx786.github.io/bollywood-beauty-salon/accessibility) |
-| robots.txt | [robots.txt](https://sysopx786.github.io/bollywood-beauty-salon/robots.txt) |
+| Home | [Home](https://cdn.jsdelivr.net/gh/sysopx786/bollywood-beauty-salon@gh-pages/) |
+| Services | [Services](https://cdn.jsdelivr.net/gh/sysopx786/bollywood-beauty-salon@gh-pages/services/) |
+| Eyebrow threading | [Eyebrow threading](https://cdn.jsdelivr.net/gh/sysopx786/bollywood-beauty-salon@gh-pages/eyebrow-threading/) |
+| Waxing | [Waxing](https://cdn.jsdelivr.net/gh/sysopx786/bollywood-beauty-salon@gh-pages/waxing/) |
+| Facials | [Facials](https://cdn.jsdelivr.net/gh/sysopx786/bollywood-beauty-salon@gh-pages/facials/) |
+| Haircuts and styling | [Haircuts and styling](https://cdn.jsdelivr.net/gh/sysopx786/bollywood-beauty-salon@gh-pages/haircuts-styling/) |
+| Hair color and highlights | [Hair color and highlights](https://cdn.jsdelivr.net/gh/sysopx786/bollywood-beauty-salon@gh-pages/hair-color/) |
+| Hair treatments | [Hair treatments](https://cdn.jsdelivr.net/gh/sysopx786/bollywood-beauty-salon@gh-pages/hair-treatments/) |
+| Bridal makeup | [Bridal makeup](https://cdn.jsdelivr.net/gh/sysopx786/bollywood-beauty-salon@gh-pages/bridal-makeup/) |
+| Party and event makeup | [Party and event makeup](https://cdn.jsdelivr.net/gh/sysopx786/bollywood-beauty-salon@gh-pages/party-makeup/) |
+| Eyelashes | [Eyelashes](https://cdn.jsdelivr.net/gh/sysopx786/bollywood-beauty-salon@gh-pages/eyelashes/) |
+| Henna / mehndi | [Henna / mehndi](https://cdn.jsdelivr.net/gh/sysopx786/bollywood-beauty-salon@gh-pages/henna-mehndi/) |
+| Massage and beauty treatments | [Massage and beauty treatments](https://cdn.jsdelivr.net/gh/sysopx786/bollywood-beauty-salon@gh-pages/beauty-treatments/) |
+| Bridal | [Bridal](https://cdn.jsdelivr.net/gh/sysopx786/bollywood-beauty-salon@gh-pages/bridal/) |
+| Pricing | [Pricing](https://cdn.jsdelivr.net/gh/sysopx786/bollywood-beauty-salon@gh-pages/pricing/) |
+| Gallery | [Gallery](https://cdn.jsdelivr.net/gh/sysopx786/bollywood-beauty-salon@gh-pages/gallery/) |
+| Before and after | [Before and after](https://cdn.jsdelivr.net/gh/sysopx786/bollywood-beauty-salon@gh-pages/before-and-after/) |
+| Reviews | [Reviews](https://cdn.jsdelivr.net/gh/sysopx786/bollywood-beauty-salon@gh-pages/reviews/) |
+| About | [About](https://cdn.jsdelivr.net/gh/sysopx786/bollywood-beauty-salon@gh-pages/about/) |
+| FAQ | [FAQ](https://cdn.jsdelivr.net/gh/sysopx786/bollywood-beauty-salon@gh-pages/faq/) |
+| Contact | [Contact](https://cdn.jsdelivr.net/gh/sysopx786/bollywood-beauty-salon@gh-pages/contact/) |
+| Privacy | [Privacy](https://cdn.jsdelivr.net/gh/sysopx786/bollywood-beauty-salon@gh-pages/privacy/) |
+| Terms | [Terms](https://cdn.jsdelivr.net/gh/sysopx786/bollywood-beauty-salon@gh-pages/terms/) |
+| Accessibility | [Accessibility](https://cdn.jsdelivr.net/gh/sysopx786/bollywood-beauty-salon@gh-pages/accessibility/) |
+| robots.txt | [robots.txt](https://cdn.jsdelivr.net/gh/sysopx786/bollywood-beauty-salon@gh-pages/robots.txt) |
 
 There is no online booking link. Calling the salon is how a visit is confirmed.
 
