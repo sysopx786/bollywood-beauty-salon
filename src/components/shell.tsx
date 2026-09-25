@@ -204,7 +204,7 @@ export function Shell({ children }: { children: React.ReactNode }) {
         </a>
         <Link
           to="/pricing"
-          className="flex flex-1 items-center justify-center border-l border-ink/10 py-4 text-sm font-medium"
+          className="menu-flash flex flex-1 items-center justify-center border-l border-wine/30 py-4 text-sm font-medium text-wine"
         >
           Menu services
         </Link>

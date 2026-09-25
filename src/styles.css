@@ -35,6 +35,22 @@
     outline-offset: 3px;
   }
 
+  @keyframes menu-flash {
+    0%,
+    100% {
+      background-color: var(--color-ivory);
+      color: var(--color-wine);
+    }
+    50% {
+      background-color: var(--color-wine);
+      color: var(--color-ivory);
+    }
+  }
+
+  .menu-flash {
+    animation: menu-flash 1.4s ease-in-out infinite;
+  }
+
   @media (prefers-reduced-motion: reduce) {
     html {
       scroll-behavior: auto;
